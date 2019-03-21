@@ -14,6 +14,7 @@ namespace UnitTest
         [TestCase(62.5, "3:5")]
         [TestCase(4, "6:32")]
         [TestCase(60, "01:60")]
+        [TestCase(60, "13:60")]
         public void Add_TheHourAndMinutes_PositiveValues (double expected, string time)
         {
             // Arrange
@@ -58,6 +59,7 @@ namespace UnitTest
         [TestCase("15.40")]
         [TestCase("5.40")]
         [TestCase("15/40")]
+        [TestCase("1540")]
         public void Add_TheHourAndMinutes_NegativeValues_FormatException(string time)
         {
             // Arrange

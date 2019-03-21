@@ -73,11 +73,10 @@ namespace Converter
                 throw new FormatException($"{nameof(time)} must have element for TimeFormat - ':'");
             }
 
-            isMatch(hour, minutes);
+            isMatched(hour, minutes);
             hour = minutes == 60 ? ++hour : hour;
-
             hour = HourFormatCheck(hour);
-            minutes = MinutesFormaCheck(minutes);
+            minutes = MinutesFormatCheck(minutes);
             #endregion
 
             #region Algorithm
@@ -104,7 +103,7 @@ namespace Converter
         /// </exception>
         /// <param name="hour">Input hour.</param>
         /// <param name="minutes">Input minutes.</param>
-        public static void isMatch(double hour, double minutes)
+        public static void isMatched(double hour, double minutes)
         {
             if (hour < 0 || hour > 24)
             {
@@ -151,7 +150,7 @@ namespace Converter
         /// </summary>
         /// <param name="minutes">Input minutes.</param>
         /// <returns>Minutes.</returns>
-        public static double MinutesFormaCheck(double minutes)
+        public static double MinutesFormatCheck(double minutes)
         {
             double x = minutes;
 

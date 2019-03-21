@@ -24,6 +24,7 @@ namespace ConsoleTest
                     var result = convert.Convert(time);
 
                     Console.WriteLine("{0}\u00B0", result);
+                    Console.WriteLine("---------");
                 }
                 
             }
